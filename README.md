@@ -60,7 +60,53 @@ Our application follows a modern, layered architecture:
 4. **Network Layer**
    - API Client
    - HTTP/HTTPS Communication
+## Docker Image
+```
+version: '3.8'
 
+services:
+  app:
+    container_name: chek-app-1
+    build:
+      context: .
+    ports:
+      - "8090:8090"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-container:3306/df
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: password
+    networks:
+      - chek_app-network
+
+  db:
+    image: mysql:5.7
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: df
+    ports:
+      - "3307:3306"
+    networks:
+      - chek_app-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin-container
+    environment:
+      PMA_HOST: mysql-container
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "8081:80"
+    networks:
+      - chek_app-network
+
+networks:
+  chek_app-network:
+    driver: bridge  # Retiré 'external: true' pour permettre la création du réseau
+
+```
 ## Technical Stack
 
 ### Backend
@@ -151,21 +197,58 @@ src/main/java/com/foodrescue/
 ### Mobile App Structure
 ```
 app/src/main/java/com/foodrescue/
-├── ui/
-│   ├── activities/
-│   ├── fragments/
-│   └── adapters/
+│── fragments/
+│   │   ├── AddFoodRescueFragment.java
+│   │   ├── AssociationListFragment.java
+│   │   ├── ChoiseFragment.java
+│   │   ├── ConfirmationFragment.java
+│   │   ├── DemandFragment.java
+│   │   ├── DonateFragment.java
+│   │   ├── DonationFragmentPrincipale.java
+│   │   ├── DonationPosition.java
+│   │   ├── DonFormFragment.java
+│   │   ├── EditProfileFragment.java
+│   │   ├── Fragment_my_donation.java
+│   │   ├── Fragment_recieve.java
+│   │   ├── HomePageFragment.java
+│   │   └── infoDonation.java
+|── activities/
+│   │   ├── designeActivity.java
+│   │   ├── SignInActivity.java
+│   │   ├── SignUnActivity.java
+│   │   ├── SplashActivity.java
+│   │   └── MainActivity.java
 ├── viewmodel/
-│   ├── UserViewModel.java
-│   └── FoodOfferViewModel.java
-├── repository/
+│   ├── AssociationViewModel.java
+│   ├── BoiteMainViewModel.java
+│   ├── DonationsViewModel.java
+│   ├── DonViewModel.java
+│   └── UserViewModel.java
+├── repositories/
+│   ├── AssociationRepository.java
+│   ├── DonRepository.java
 │   ├── UserRepository.java
-│   └── FoodOfferRepository.java
+│   └── UserRepository1.java
 ├── data/
 │   ├── local/
-│   └── remote/
-└── network/
-    └── ApiClient.java
+│   │   └── SessionManager.java
+│   ├── remote/
+│   │   ├── RetrofitClient.java
+│   │   └── UserApiService.java
+│   └── model/
+│       ├── entity/
+│       │   ├── Association.java
+│       │   ├── AuthRequest.java
+│       │   ├── AuthResponse.java
+│       │   ├── BoiteMail.java
+│       │   ├── Don.java
+│       │   ├── Donations.java
+│       │   └── User.java
+│       ├── LoginDataSource.java
+│       ├── LoginRepository.java
+│       └── Result.java
+└── service/
+    └── DonationsService.java
 ```
 
 ## Implementation Guide
