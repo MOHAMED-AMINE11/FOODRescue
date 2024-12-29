@@ -1,9 +1,9 @@
 # FoodRescue: Bridging the Gap Between Food Surplus and Need
 
 
-<div style="display: flex; justify-content: center; align-items: center;">
+<p align="center">
     <img src="https://github.com/user-attachments/assets/4047a52a-de75-4592-affe-60a4aeb5a3d4" alt="Project Logo" width="400" height="600"/>
-</div>
+</p>
 
 FoodRescue is an innovative mobile application designed to address the critical challenge of food waste while combating food insecurity through efficient resource redistribution and community engagement.
 
