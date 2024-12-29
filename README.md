@@ -9,7 +9,6 @@ FoodRescue is an innovative mobile application designed to address the critical 
 - [Overview](#overview)
 - [Software Architecture](#software-architecture)
 - [Technical Stack](#technical-stack)
-- [Project Structure](#project-structure)
 - [Implementation Guide](#implementation-guide)
 - [Features](#features)
 - [Getting Started](#getting-started)
