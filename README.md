@@ -193,14 +193,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 }
 ```
-## Features
-
-- User Authentication with JWT
-- Food Offer Management
-- Geolocation Services
-- Real-time Updates
-- Offer Matching
-
 ## Getting Started
 
 Certainly! Here are step-by-step instructions to set up and run your project locally:
@@ -235,7 +227,22 @@ Certainly! Here are step-by-step instructions to set up and run your project loc
    - Start your XAMPP Apache and MySQL servers.
    - Run the Spring Boot application. The database and entities will be created automatically.
    - Verify that the backend is running by visiting [http://localhost:8090](http://localhost:8090) in your browser.
+### Frontend Setup:
 
+1. *Install Android Studio:*
+   - Open project in Android Studio.
+   - Update local.properties with SDK location.
+     
+3. *Run:*
+   - Build and run the application
+     
+## Features
+
+- User Authentication with JWT
+- Food Offer Management
+- Geolocation Services
+- Real-time Updates
+- Offer Matching
 
 # Video Demonstration
 
