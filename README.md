@@ -194,63 +194,6 @@ src/main/java/com/foodrescue/
     └── UserDetailsServiceImpl.java
 ```
 
-### Mobile App Structure
-```
-app/src/main/java/com/foodrescue/
-│── fragments/
-│   │   ├── AddFoodRescueFragment.java
-│   │   ├── AssociationListFragment.java
-│   │   ├── ChoiseFragment.java
-│   │   ├── ConfirmationFragment.java
-│   │   ├── DemandFragment.java
-│   │   ├── DonateFragment.java
-│   │   ├── DonationFragmentPrincipale.java
-│   │   ├── DonationPosition.java
-│   │   ├── DonFormFragment.java
-│   │   ├── EditProfileFragment.java
-│   │   ├── Fragment_my_donation.java
-│   │   ├── Fragment_recieve.java
-│   │   ├── HomePageFragment.java
-│   │   └── infoDonation.java
-|── activities/
-│   │   ├── designeActivity.java
-│   │   ├── SignInActivity.java
-│   │   ├── SignUnActivity.java
-│   │   ├── SplashActivity.java
-│   │   └── MainActivity.java
-├── viewmodel/
-│   ├── AssociationViewModel.java
-│   ├── BoiteMainViewModel.java
-│   ├── DonationsViewModel.java
-│   ├── DonViewModel.java
-│   └── UserViewModel.java
-├── repositories/
-│   ├── AssociationRepository.java
-│   ├── DonRepository.java
-│   ├── UserRepository.java
-│   └── UserRepository1.java
-├── data/
-│   ├── local/
-│   │   └── SessionManager.java
-│   ├── remote/
-│   │   ├── RetrofitClient.java
-│   │   └── UserApiService.java
-│   └── model/
-│       ├── entity/
-│       │   ├── Association.java
-│       │   ├── AuthRequest.java
-│       │   ├── AuthResponse.java
-│       │   ├── BoiteMail.java
-│       │   ├── Don.java
-│       │   ├── Donations.java
-│       │   └── User.java
-│       ├── LoginDataSource.java
-│       ├── LoginRepository.java
-│       └── Result.java
-└── service/
-    └── DonationsService.java
-```
-
 ## Implementation Guide
 
 ### 1. Backend Security Configuration
