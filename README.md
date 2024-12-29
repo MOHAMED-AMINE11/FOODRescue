@@ -167,33 +167,6 @@ dependencies {
 }
 ```
 
-## Project Structure
-
-### Backend Structure
-```
-src/main/java/com/foodrescue/
-├── config/
-│   ├── SecurityConfig.java
-│   └── JwtConfig.java
-├── controller/
-│   ├── AuthController.java
-│   ├── FoodOfferController.java
-│   └── UserController.java
-├── service/
-│   ├── UserService.java
-│   └── FoodOfferService.java
-├── model/
-│   ├── User.java
-│   ├── FoodOffer.java
-│   └── Location.java
-├── repository/
-│   ├── UserRepository.java
-│   └── FoodOfferRepository.java
-└── security/
-    ├── JwtTokenProvider.java
-    └── UserDetailsServiceImpl.java
-```
-
 ## Implementation Guide
 
 ### 1. Backend Security Configuration
@@ -252,38 +225,39 @@ public class FoodOfferViewModel extends ViewModel {
 
 ## Getting Started
 
-### Prerequisites
-- JDK 11 or later
-- MySQL 5.7+
-- Android Studio 4.0+
-- Maven or Gradle
+Certainly! Here are step-by-step instructions to set up and run your project locally:
 
-### Backend Setup
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/foodrescue.git
+### Prerequisites:
 
-# Navigate to backend directory
-cd foodrescue/backend
+1. *Git:*
+   - Make sure you have Git installed. If not, download and install it from [git-scm.com](https://git-scm.com/).
 
-# Build the project
-mvn clean install
+2. *XAMPP:*
+   - Install XAMPP from [apachefriends.org](https://www.apachefriends.org/).
+   - Start the Apache and MySQL servers in XAMPP.
+   - Ensure MySQL is using port 3306.
 
-# Run the application
-mvn spring-boot:run
-```
 
-### Mobile App Setup
-```bash
-# Navigate to mobile directory
-cd foodrescue/mobile
+### Backend Setup:
 
-# Build the project
-./gradlew build
+1. *Clone the Project:*
+   bash
+   git clone <repository_url>
+   cd <project_folder>
+   
 
-# Run tests
-./gradlew test
-```
+2. *Install Backend Dependencies:*
+   - Open a terminal in the backend project folder.
+   - Run the following commands:
+     bash
+     mvn clean install
+     
+
+3. *Run Backend:*
+   - Start your XAMPP Apache and MySQL servers.
+   - Run the Spring Boot application. The database and entities will be created automatically.
+   - Verify that the backend is running by visiting [http://localhost:8090](http://localhost:8090) in your browser.
+
 
 ## Contributing
 
@@ -295,6 +269,6 @@ cd foodrescue/mobile
 
 ## Team
 
+- Mohamed Lachgar ([Researchgate](https://www.researchgate.net/profile/Mohamed-Lachgar))
 - Mohamed Amine EL MASKYNE ([Email](mailto:mohamedamine.elmaskyne@gmail.com))
-- Mohamed LACHGAR
 - Abdellah EL GHARBI ([Email](mailto:abdellah.elgharbi2002@gmail.com))
