@@ -237,13 +237,17 @@ Certainly! Here are step-by-step instructions to set up and run your project loc
    - Verify that the backend is running by visiting [http://localhost:8090](http://localhost:8090) in your browser.
 
 
-## Contributing
+# Video Demonstration
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Click the link below to watch a demonstration video:
+
+
+
+https://github.com/Hajarita12/RepositoryPFA24/assets/120518556/60b7d1c8-a5bd-47bd-aeaf-68fadc36bb47
+# Contributing
+
+We welcome contributions from everyone, and we appreciate your help to make this project even better! If you would like to contribute, please follow these guidelines:
+
 
 ## Team
 
