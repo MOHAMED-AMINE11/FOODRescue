@@ -191,36 +191,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 }
 ```
-
-### 2. Mobile ViewModel Implementation
-```java
-public class FoodOfferViewModel extends ViewModel {
-    private final MutableLiveData<List<FoodOffer>> foodOffers;
-    private final FoodOfferRepository repository;
-    
-    public FoodOfferViewModel() {
-        foodOffers = new MutableLiveData<>();
-        repository = new FoodOfferRepository();
-    }
-    
-    public LiveData<List<FoodOffer>> getFoodOffers() {
-        return foodOffers;
-    }
-    
-    public void loadFoodOffers() {
-        repository.getFoodOffers()
-            .subscribe(offers -> foodOffers.setValue(offers));
-    }
-}
-```
-
 ## Features
 
 - User Authentication with JWT
 - Food Offer Management
 - Geolocation Services
 - Real-time Updates
-- Message System
 - Offer Matching
 
 ## Getting Started
